@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>QF Dashboard</title>
+
+  </head>
+
+  <body>
+
+<h1>Number of Members:</h1>
+
+<b>{{member_count}}</b>
+
+<h1>Latest members:</h1>
+
+    <table>
+     <tr>
+       <th>Member</th>
+     </tr>
+
+{%for member in members %}
+
+     <tr>
+       <td>{{member.member_name}}</td>
+     </tr>
+{%endfor%}
+   </table>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>
